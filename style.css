@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: dimgray;
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+form,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background: white;
+  border-style: none;
+}
+
+.input_div {
+  display: flex;
+  justify-content: center;
+  overflow:hidden;
+  border-radius: 10px;
+}
+
+.add_btn {
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1%;
+  display: flex;
+  min-width: 350px;
+}
+
+.todo {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+  font-size: 2rem;
+  overflow:hidden;
+  border-radius: 10px;
+}
+
+.task {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+.del_btn {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: darkorange;
+  cursor: pointer;
+  padding: 9px;
+}
