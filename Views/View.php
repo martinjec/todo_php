@@ -6,6 +6,6 @@ class View
 {
     public function render($name)
     {
-        require 'Views/' . $name . '.php';
+        require "Views/$name.php";
     }
 }
