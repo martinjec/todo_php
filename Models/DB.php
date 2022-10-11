@@ -4,14 +4,14 @@ namespace Models;
 
 use \PDO;
 
-class DB
+abstract class DB
 {
     private $host = 'localhost';
     private $user = 'root';
     private $password = '';
     private $dbName = 'tasks';
 
-    public function connect()
+    protected function connect()
     {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         $this->pdo = new PDO($dsn, $this->user, $this->password);

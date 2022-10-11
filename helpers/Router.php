@@ -14,23 +14,24 @@ class Router
         $url = explode('/', $url);
         $this->url = $url;
     }
-    //Run routes
+
     public function getRoute()
     {
         $url = $this->url;
-        if (empty($url[1])) {
+        if (empty($url[1])){
             $class = 'Controllers\Index';
-            $class = new $class;
-        } else if (!empty($url[1])) {
-            $folders = array('controllers', 'models',);
-            foreach ($folders as $folder) {
-                $file = $folder . '\\' . $url[1];
-                if (class_exists($file)) {
-                    $class = new $file;
-                    $start = "Controllers\Index";
-                    return new $start;
-                }
+            new $class;
+        }
+        if (!empty($url[1])) {
+            $class = 'controllers\\' . $url[1];
+            new $class;
+        }
+        if (!empty($url[1])) {
+            if ($url[1] !== 'index') {
+                $class = 'Controllers\Index';
+                return new $class;
             }
         }
     }
-}
+}   
+   

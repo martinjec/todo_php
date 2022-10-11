@@ -8,3 +8,5 @@
     </div>
   </div>
 </form>
+<form action="delTask" class="output" method="POST">
+  
